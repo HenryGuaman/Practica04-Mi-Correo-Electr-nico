@@ -1,81 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<title>PHP</title>
-	<script type="text/javascript" src="../controladores/javascript.js"></script>
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<style type="text/css">
-		.error {
-			border: 1px solid red;
-		}
-
-		.p {
-			display: block;
-			color: red;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practica Hipermedial</title>
+    <link rel="stylesheet" href="../vista/css/crear_usuario.css">
+    <link rel="stylesheet" href="../vista/css/cabecera.css">
 </head>
+
 <body>
-	<header>
-		<h1>Sistema de Gestión de Personas</h1>
-	</header>
 
-	<section>
-		<div>
-			<form method="POST" action="../controladores/crear_usuario.php" onsubmit="return validar()">
-				<table>
+    <header>
+        <!--Menu de Navegacion-->
+        <div class="ancho">
+            <nav>
+                <ul>
+                    <li><a href="../vista/crear_usuario.html">Crear Usuario</a></li>
+                    <li><a href="../../admin/vista/admin/index.php">Modificar</a></li>
+                    <li><a href="../vista/login.html">Iniciar Sesion</a></li>
+                </ul>
+            </nav>
 
-					<tr>
-						<td><label>Cedula</label></td>
-						<td><input type="text" id="ced" name="ced" placeholder="ingresar contraseña" onchange="escribe(this)"></td>
-					</tr>
+        </div>
 
-					<tr>
-						<td><label>Nombre</label></td>
-						<td><input type="text" name="nom" placeholder="ingresar nombre" onchange="escribe(this)"></td>
-					</tr>
+    </header>
+    <br>
+    <br>
+    <br>
 
-					<tr>
-						<td><label>Apellido</label></td>
-						<td><input type="text" name="ape" placeholder="ingresar apellido" onchange="escribe(this)"></td>
-					</tr>
+    <div class="contenedor">
+        <form action="../controladores/crear_usuario.php" method="POST" enctype="multipart/form-data">
 
-					<tr>
-						<td><label>Dirección</label></td>
-						<td><input type="text" name="dir" placeholder="ingresar dirección" onchange="escribe(this)"></td>
-					</tr>
+            <h2>Nuevo Usuario</h2>
 
-					<tr>
-						<td><label>Teléfono</label></td>
-						<td><input type="text" name="tel" placeholder="ingresar número telefónico" onchange="escribe(this)"></td>
-					</tr>
+            <input type="text" name="cedula" placeholder="Cedula" required>
+            <input type="text" name="nombres" placeholder="Nombre" required>
+            <input type="text" name="apellidos" placeholder="Apellido" required>
+            <input type="text" name="direccion" placeholder="Direccion" required>
+            <input type="text" name="telefono" placeholder="Telefono" required>
+            <input type="email" name="correo" placeholder="Email" required>
+            <input type="date" name="fechaNacimiento" required>
+            <input type="password" name="contrasena" placeholder="Contraseña">
+            
+            <div class="foto">
+                <img class="perfil" src="../../config/imagenes/sinFoto.jpg" alt="">
+                <br>
+                <input type="file" name="foto" id="foto">
+            </div>
+            <input id="boton" type="submit" value="Registrar" required>
+        </form>
+       
+    </div>
 
-					<tr>
-						<td><label>Fecha de Nacimiento</label></td>
-						<td><input type="date" name="fec" onchange="escribe(this)"></td>
-					</tr>
-
-					<tr>
-						<td><label>Email</label></td>
-						<td><input type="email" name="ema" placeholder="ingresar su email" onchange="escribe(this)"></td>
-					</tr>
-
-					<tr>
-						<td><label>Contraseña</label></td>
-						<td><input type="password" name="con" placeholder="ingrese su contraseña" onchange="escribe(this)"></td>
-					</tr>
-
-					<tr>
-						<td colspan="2">
-							<input type="submit" id="crear" name="crear" value="Aceptar">
-							<input type="reset" id="cancelar" name="cancelar" value="Cancelar">
-						</td>
-					</tr>
-				</table>
-			</form>
-			<p id="p" style="">Error, campos incompletos!</p>
-		</div>
-	</section>
 </body>
+
 </html>

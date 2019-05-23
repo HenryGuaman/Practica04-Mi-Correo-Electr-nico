@@ -1,30 +1,38 @@
+
 <?php
-	session_start();
+session_start();
+if (!isset($_SESSION['isLogin'])) {
+    header("Location: ../../admin/vista/admin/index.php");
+} elseif ($_SESSION['rol'] == 'user') {
+   // header("Location: ../usuario/index.php");
+}
+?>
 
-	include '../../config/conexionBD.php';
 
-	$usuario = isset($_POST["usu"]) ? trim($_POST["usu"]) : null;
-	$contrasena = isset($_POST["con"]) ? trim($_POST["con"]) : null;
+<?php
 
-	$sql = "SELECT * FROM usuario WHERE usu_correo = '$usuario' and usu_password = MD5('$contrasena')";
+    include '../../config/conexionBD.php';
 
-	$result = $conn -> query($sql);
+    $usuario = isset($_POST["correo"]) ? trim($_POST["correo"]) : null;
+    $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
 
-	if ($result -> num_rows > 0) {
-		$row = $result -> fetch_assoc();
-		$_SESSION['isLogged'] = TRUE;
-		if ($row['usu_rol'] == 'user') {
-			$_SESSION['rol'] = 'user';
-			$_SESSION['codigo'] = $row['usu_codigo'];
-			header("Location: ../../admin/vista/usuario/vista/index.php");
-		} else {
-			$_SESSION['rol'] = 'admin';
-			$_SESSION['codigo'] = $result -> fetch_assoc()['usu_codigo'];
-			header("Location: ../../admin/vista/admin/vista/index.php");
-		}
-	} else {
-		header("Location: ../vista/login.html");
-	}
+    $sql = "SELECT * FROM usuario WHERE usu_correo = '$usuario' and usu_password = MD5('$contrasena')";
 
-	$conn -> close();
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+
+    if ($result->num_rows > 0) {
+        $_SESSION['isLogin'] = true;
+        $_SESSION['codigo']=$row["usu_codigo"];
+        $_SESSION['rol']=$row["rol"];
+        $_SESSION['nom']=$row["usu_nombres"];
+        $_SESSION['ape']=$row["usu_apellidos"];
+        $_SESSION['img']=$row["img"];
+        
+        header("Location: ../../admin/vista/admin/index.php");
+    } else {
+        header("Location: ../vista/login.html");
+    }
+    $conn->close();
+
 ?>
