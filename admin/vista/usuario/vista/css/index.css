@@ -1,0 +1,103 @@
+.header ul {
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    text-align: right;
+    overflow: hidden;
+}
+
+.header li {
+     display: inline;
+}
+
+.header li a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  padding: 0px 10px;
+  margin: 3px;
+  width: 100px;
+  height: 26px;
+    vertical-align: middle;
+}
+
+.img {
+  max-width: 25px;
+}
+
+.informacion {
+  width: 100%;
+}
+
+.informacion th {
+  font-size: 18px;
+  text-align: left;
+}
+
+.informacion td {
+  font-size: 12px;
+  text-align: right;
+}
+
+.btn {
+  border-top: 1px solid white;
+  background-color: rgba(154, 187, 181, 0.2);
+  width: 100%;
+  height: 50px;
+}
+
+.btn: hover {
+  background-color: rgba(154, 187, 181, 0.6) !important; 
+}
+
+#sec1 {
+  width: 25%;
+  height: 100%;
+  float: left;
+  padding: 60px 0px 0px 15px;
+  box-shadow: 5px 0px 25px grey;
+  overflow:scroll;
+  overflow-x:hidden;
+}
+
+#sec2 {
+  width: 70%;
+  float: left;
+  padding: 60px 0px 0px 15px;
+}
+
+#sec2 #from {
+  width: 100%;
+  padding: 60px 0px 0px 15px;
+  border-bottom: 1px solid rgba(154, 187, 181, 0.2);
+}
+#sec2 #mensaje {
+  width: 100%;
+  padding: 15px 0px 0px 15px;
+}
+
+#nuevo {
+  width: 98%;
+  padding: 60px 15px;
+}
+
+#nuevo table {
+  width: 100%;
+}
+
+#nuevo table th {
+  text-align: left;
+  width: 70px;
+}
+
+#submit {
+  margin: 20px;
+}
+
+.btn_noborder, #mensaje {
+  width: 100%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  resize: none;
+}
