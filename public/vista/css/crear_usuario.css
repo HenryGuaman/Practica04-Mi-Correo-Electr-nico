@@ -4,7 +4,7 @@
 
 }
 body{
-    background: url(../img/user.jpg);
+    background-color: aqua;
     background-repeat: no-repeat; 
     background-size: cover;
     background-attachment: fixed;
@@ -65,7 +65,7 @@ input{
     background: rgba(255, 0, 0, 0.0);
     color: #fff;
     margin-top: 1px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: Arial, Helvetica, sans-serif
 
 }
 #boton:hover{
@@ -74,7 +74,7 @@ input{
     cursor: pointer;
 }
 #boton:active{
-    background-color: rgba(49, 9, 228, 0.2);
+    background-color: aqua;
     outline: 0;
     border: 0;
     border-radius: 5px;

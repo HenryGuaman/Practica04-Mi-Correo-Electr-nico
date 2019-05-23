@@ -17,7 +17,7 @@
             <div class="container-footer">
                 <div class="copi">
                     <label>&copy; Copyright</label>
-                    <label> Tito Marcelo Durazno Dominguez</label>
+                    <label> Henry Israel Guaman Fajardo</label>
                     
                 </div>
             </div>
