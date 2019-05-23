@@ -7,7 +7,7 @@ header {
     top:0px;
     width: 100%;
     display: flex;
-    background: rgba(0, 0, 0, .8);
+    background-color: blueviolet;
     height: 70px;
     position: fixed;
     z-index: 10;
@@ -44,8 +44,7 @@ header {
 nav {
 
     height: 70px;
-    /* background: olive; */
-    float: left;
+   float: left;
     text-align: right;
     padding-top: 24px;
 }
@@ -55,7 +54,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color:black;
     font-size: 13px;
     text-decoration: none;
     text-transform: uppercase;
@@ -67,7 +66,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #44C6DA;
+    color:black;
     border-bottom: 2px solid #44DAAE;
     transition: 0.6s;
 }

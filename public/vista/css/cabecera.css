@@ -33,7 +33,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: black;
     font-size: 13px;
     text-decoration: none;
     text-transform: uppercase;
@@ -43,4 +43,3 @@ nav ul li a {
     border-bottom: 2px solid transparent;
     transition: 0.6s;
 }
-

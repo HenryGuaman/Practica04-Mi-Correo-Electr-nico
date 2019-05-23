@@ -26,7 +26,7 @@ form {
 }
 
 h2 {
-    color: #fff;
+    color:black;
     text-align: center;
     margin: 0;
     font-size: 30px;
@@ -35,7 +35,7 @@ h2 {
 
 ::placeholder {
     font-family: rale;
-    color: springgreen;
+    color:black;
 }
 
 input {
@@ -45,7 +45,7 @@ input {
     font-size: 15px;
     font-family: rale;
     background: linear-gradient(to bottom, 
-    rgba(0, 221, 255, .6), 
+    rgba(251, 253, 253, 0.6), 
     rgba(0, 0, 0, .6));
 }
 
@@ -56,8 +56,8 @@ input {
     border: 0;
     text-align: center;
     background: rgba(255, 0, 0, 0.0);
-    border-bottom: solid 1px #fff;
-    color: #fff;
+    border-bottom: solid 1px black;
+    color: black;
     margin-top: 1px;
     transition: all 300ms ease;
     font-family: rale;

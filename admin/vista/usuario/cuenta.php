@@ -66,8 +66,6 @@ if (!isset($_SESSION['isLogin'])) {
                         echo "<td>" . $row["usu_correo"] . "</td>";
                         echo "<td>" . $row["usu_telefono"] . "</td>";
                         echo "<td>" . $row["usu_fecha_nacimiento"] . "</td>";
-                        echo '<td><img src="../../../img/fotos/' . $row["usu_codigo"] . '/' . $row["img"] . '" alt=""></td>';
-
                         if ((string)$row["usu_eliminado"] === 'N') {
                             echo '<td><a href="deleteUser.php?usu_cod=' . $row["usu_codigo"] . '&delete=' . true . '">Eliminar</a></td>';
                         } else {
